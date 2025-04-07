@@ -25,3 +25,10 @@
 ### 다른 환경에서 git 이어서 작업하기
 1. 새폴더 연결하기
 2. `git clone 저장소 주소 붙여넣기`
+3. `cd TIL`로 작성할 main 폴더 연결하기
+4. 내용 추가 작성하기
+5. `git status`로 저장 파일 확인하기
+6. `git add .` 저장하기
+7. `git status` 저장확인하기
+8. `git commit -m '메모작성'` 작성한 내용 저장하기
+9. `git push origin main` 하여 깃허브 업로드
