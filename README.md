@@ -34,4 +34,5 @@
 9. `git push origin main` 하여 깃허브 업로드
 ### 학원에서 다시 내려받기
 1. `TIL` 폴더 열어주기
-2. `git pull origin main` 하여 
+2. `git pull origin main` 하여 전체 내려받기 후 수정
+3. 동일하게 깃허브에 저장해주기
