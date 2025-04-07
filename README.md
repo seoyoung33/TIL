@@ -32,3 +32,6 @@
 7. `git status` 저장확인하기
 8. `git commit -m '메모작성'` 작성한 내용 저장하기
 9. `git push origin main` 하여 깃허브 업로드
+### 학원에서 다시 내려받기
+1. `TIL` 폴더 열어주기
+2. `git pull origin main` 하여 
