@@ -97,10 +97,10 @@
 * 대체텍스트 alt 속성을 필수로 작성해야 한다. (alt를 누르라는 뜻이 아님 주의 ⭐)
     → 시각장애인들을 위한 리딩 기능이 가능해지기 때문!
 * 이미지 사용 시 의미전달이 필요한 이미지와 아닌 이미지를 구분해서 사용해야 한다.
-* <img src=”url” alt=””>
+* `<img src=”url” alt=””>`
 * 동일하게 하나 더 넣게 되면 옆으로 위치하게 되는데, 인라인이기 때문이다.
 * 필수속성 : src, alt
-* 예시) <img src="./images/quick03.png" alt="실시간 카톡 상담하기">
+* 예시) `<img src="./images/quick03.png" alt="실시간 카톡 상담하기">`
 ----
 ### 2025/04/07 | HTML 4일차 | 레이아웃
 ## `div`와 `span` 그룹태그 사용법
@@ -174,10 +174,10 @@
 3. `pst1`과 같은 이동 위치가 정해진다면 앞에 올렸던 &lt;a href="#"&gt;태그의 # 뒤에 `pst1`과 같은 위치내용을 적어준다.
 4. 저장하고 Go live를 확인한다.
 ### 응용하기
-`<a href="#"></a>` <!-- 임시링크 -->
-`<a href="#header"></a>`<!-- id header위치로 바로가기(같은 파일의 다른위치) -->
-`<a href="./basic/index.html"></a>`<!-- 현재 위치의 basic폴더 안에 index.html 파일을 연결하기 -->
-`<a href="./basic/index.html#main"></a>`<!-- 현재 위치의 basic폴더 안에 index.html 파일의 main위치로 바로 가기(다른 파일의 다른위치) -->
+`<a href="#"></a>` -> 임시링크
+`<a href="#header"></a>`-> id header위치로 바로가기(같은 파일의 다른위치)
+`<a href="./basic/index.html"></a>`-> 현재 위치의 basic폴더 안에 index.html 파일을 연결하기
+`<a href="./basic/index.html#main"></a>`-> 현재 위치의 basic폴더 안에 index.html 파일의 main위치로 바로 가기(다른 파일의 다른위치)
 -----
 ### 2025/04/09| HTML 6일차 | 하이퍼링크 태그 추가
 ### 바로가기 메뉴 만들기 (수업시간 정리)
