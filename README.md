@@ -49,10 +49,7 @@
 1. //비디오를 작성하는 방법1
 * `<video src="동영상경로"></video>`
 2. // 비디오를 작성하는 방법2
-`<video>`
-    `<source src="동영상경로" type="동영상타입1">`
-    `<source src="동영상경로" type="동영상타입2">`
-`</video>`
+* `<video>` 태그 안에 `<source src="동영상경로" type="동영상타입1">`와 `<source src="동영상경로" type="동영상타입2">`
 * 동영상태그 video는 블록태그로 블록과 형제관계여야 한다.
 * 브라우저 별로 호환되는 확장자를 주의하며 동영상을 연결해야 한다.
 * 동영상태그의 주요 속성 종류와 뜻
@@ -178,9 +175,9 @@
 4. 저장하고 Go live를 확인한다.
 ### 응용하기
 `<a href="#"></a>` <!-- 임시링크 -->
-`<a href="#header"></a>`<!-- id header위치로 바로가기 -->
+`<a href="#header"></a>`<!-- id header위치로 바로가기(같은 파일의 다른위치) -->
 `<a href="./basic/index.html"></a>`<!-- 현재 위치의 basic폴더 안에 index.html 파일을 연결하기 -->
-`<a href="./basic/index.html#main"></a>`<!-- 현재 위치의 basic폴더 안에 index.html 파일의 main위치로 바로 가기 -->
+`<a href="./basic/index.html#main"></a>`<!-- 현재 위치의 basic폴더 안에 index.html 파일의 main위치로 바로 가기(다른 파일의 다른위치) -->
 -----
 ### 2025/04/09| HTML 6일차 | 하이퍼링크 태그 추가
 ### 바로가기 메뉴 만들기 (수업시간 정리)
