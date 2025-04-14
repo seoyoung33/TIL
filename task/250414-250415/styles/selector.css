@@ -1,4 +1,4 @@
-body {}
+/* 아이디와 클래스 선택자 연습용 */
 #weather {}
 #weather h1 {}
 #weather .area {}
@@ -8,3 +8,11 @@ body {}
 #weather .humidity {}
 #weather .dust {}
 #weather .result {}
+/* 자식 자손 선택자 연습용 */
+#news {}
+#news > a {}
+#news .box {}
+#news .box a {}
+#news .box a h2 {}
+#news .box a p {}
+#news > p {}
