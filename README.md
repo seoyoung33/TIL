@@ -199,3 +199,28 @@
 * `<link rel="shortcut icon" href="파비콘 이미지경로" type="image/x-icon">`
 * `<link rel="icon" href="파비콘 이미지경로" type="image/x-icon">`
 * Go live를 통해 확인해준다.
+### CSS Style Sheet
+* 외부스타일시트 파일 저장은 **styles**폴더에 `파일명.css`로 저장한다.
+* 위 파일 생성 후 CSS연결을 원하는 HTML파일 head위치에 `<link>`태그로 연결한다.
+* HTML작성 후 HTML의 모든 디자인형태를 초기화하는 `reset.css`파일을 반드시 연결!
+* 웹글꼴(Noto Sans KR, Pretendard 등) 연결 시 HTML파일에 `<link>` 태그 연결!
+### head태그 내에 들어가는 link태그 작성 순서
+1. 웹글꼴 포함 기타 플러그인 연결 주소
+2. reset.css파일
+3. 해당 HTML별 디자인.css
+### 디자인 CSS 작성 시 작성 순서 및 주의사항
+* **부모->자식**순서로 가장 바깥쪽 부모부터 먼저 선택자를 만들고 디자인한다.
+* 레이아웃 관련 요소에 `width, height` 속성 작성 시 영역 확인을 위한 `background-color`를 꼭 함께 작성해서 정확히 구분한다. 이 때 색상은 쉬운 영역 구분을 위한 `aqua, lime, yellow, pink` 등의 밝은 색상 위주로 사용한다. 영역 확인과 디자인 작업을 모두 마친 후 위 색상은 제거로 마무리 해야한다.
+* 실제 디자인에 들어가는 색상은 **rgba 또는 헥사코드**로 입력하고 테스트용으로 입력하는 임시 색상은 영문명으로 입력해야 한다.
+### 자주 이용하는 CSS 속성 값과 기본값 (뜻,기본값,예시)
+* `letter-spacing` 자간 | 0 | `letter-spacing:-0.02rem;`
+* `line-height` 행간 | 1 또는 100% | `line-heigt:1.5;`
+* `font-size` 글자크기 | 1rem 또는 1em (16px) | `font-size:1.2rem;`
+* `color` 글자색상 | x | `color:#f00; color:rgba(0,0,0,0.5);`
+* `background-color` 배경색상 | x | `background-color:#000`
+* `width` 가로폭 | x | `width:100px;`
+* `height` 세로높이 | x | `heigth:200px;`
+* `margin` 바깥여백 | x | `margin-top:50px;`
+* `border-radius` 모서리둥글기 | x | `border-radius:10px;`
+* `font-weight` 글자굵기 | 400 | `font-weigh:800;`
+* `font-family` 글꼴 | x | `font-family:'대표글꼴', '보조글꼴', sans-serif;`
