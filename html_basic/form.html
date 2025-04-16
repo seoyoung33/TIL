@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 입력, 선택 컨트롤 양식 폼</title>
+    <style>
+        legend {display:none;} /* reset.css에 넣어두기! (모든 HTML적용 초기화기준) */
+    </style>
+</head>
+<body>
+    <!-- 사용자 입력, 선택 컨트롤 묶음 틀로 form 작성 -->
+    <!-- action 사용자가 입력, 선택한 데이터를 전송하는 서버 -->
+    <!-- method 데이터 전송 시 전송방법 get or post-->
+    <form action="#" method="post" id="join_frm">
+        <!-- fieldset 전체 폼 태그 안 그룹이 필요할 경우 작성 -->
+        <!-- legend 그룹의 제목(데이터 구분 목적, 실제 디자인에서는 숨김) -->
+        <!-- form에는 '양식'이라는 이름을 많이 붙임 -->
+        <fieldset>
+            <legend>아이디, 비밀번호, 이메일 입력양식</legend>
+            <span>리뷰 작성</span>
+            <textarea name="user_review" rows="5" cols="50" placeholder="100자 이상 작성하셔야 리뷰 등록됩니다."></textarea><br>
+            <span>받는 사람 : </span>
+            <input type="text" multiple name="receiving"><br>
+            <span>사진 첨부 : </span>
+            <input type="file" name="user_photo" accept="image/*"><br>
+            <span>아이디 : </span>
+            <input type="text" placeholder="아이디 8~10글자 이내" name="user_id" required maxlength="10" size="20" autocomplete="on">
+            <button type="submit">아이디 중복 확인</button><br><!-- submit 전송하겠다는 뜻 -->
+            <span>비밀번호 : </span><input type="password" name="user_pw"><br>
+            <span>주민등록번호 : </span>
+            <input type="text" name="resident_first" maxlength="6">-
+            <input type="password" name="resident_last" maxlength="1"><br>
+            <span>주문수량 : </span>
+            <input type="number" name="order_num" value="1"><br>
+            <input type="email">
+            <input type="search">
+            <input type="date">
+            <input type="time">
+            <input type="url">
+        </fieldset>
+        <fieldset>
+            <legend>개인정보 입력 및 선택양식</legend><!-- 인라인이지만 숨길거라 블록과 형제여도 상관 x -->
+            <dl>
+                <dt>성별</dt>
+                <dd>
+                    <!-- laber for 글자를 클릭해도 선택 가능하게 함. id꼭 써주기!! -->
+                    <!-- value와 id, laber for의 속성값은 동일하게 작성하면 됨 -->
+                    <!-- name은 동일한 그룹으로 들어가야 하기 때문에 동일하게 작성해주기! -->
+                    <!-- radio 같은 그룹 안에서 하나만 선택할 수 있게 함 -->
+                    <label for="male">남</label> 
+                    <input type="radio" name="gender" value="male" id="male">
+                    <label for="female">여</label>
+                    <input type="radio" name="gender" value="female" id="female">
+                    <label for="none">선택안함</label>
+                    <input type="radio" name="gender" value="none" id="none">
+                </dd>
+                <dt>선호직업</dt>
+                <dd>아래 항목 중 하나만 선택하세요.</dd>
+                <dd>
+                    <label>
+                        <span>웹디자이너</span>
+                        <input type="radio" name="job" value="web_designer">
+                    </label>
+                    <label>
+                        <span>웹퍼블리셔</span>
+                        <input type="radio" name="job" value="web_publisher">
+                    </label>
+                    <label>
+                        <span>프론트엔드개발자</span>
+                        <input type="radio" name="job" value="frontend_developer">
+                    </label>
+                </dd>
+                <dt>CSS 문제. 우선순위가 클래스보다 높은 것을 선택하세요.</dt><!-- 선택자 우선순위 -->
+                <dd>아래 항목 중 정답에 해당하는 2개 이상을 선택하세요.</dd><!-- 정답은 id,inline!! -->
+                <dd><!-- 바로 쓰기 -->
+                    <label for="tag">tag</label>
+                    <input type="checkbox" name="quiz" value="tag" id="tag">
+                    <label for="class">class</label>
+                    <input type="checkbox" name="quiz" value="class" id="class">
+                    <label for="id_answer">id</label>
+                    <input type="checkbox" name="quiz" value="id" id="id_answer">
+                    <label for="inline_answer">inline</label>
+                    <input type="checkbox" name="quiz" value="inline" id="inline_answer">
+                    <label for="style">style</label>
+                    <input type="checkbox" name="quiz" value="style" id="style">
+                </dd>
+                <dd><!-- 부모/자식 -->
+                    <label>
+                        <span>tag</span>
+                        <input type="checkbox" name="quiz" value="tag">
+                    </label>
+                    <label>
+                        <span>class</span>
+                        <input type="checkbox" name="quiz" value="class">
+                    </label>
+                    <label>
+                        <span>id</span>
+                        <input type="checkbox" name="quiz" value="id_answer">
+                    </label>
+                    <label>
+                        <span>inline</span>
+                        <input type="checkbox" name="quiz" value="inline_answer">
+                    </label>
+                    <label>
+                        <span>style</span>
+                        <input type="checkbox" name="quiz" value="style">
+                    </label>
+                </dd>
+            </dl>
+        </fieldset>
+        <fieldset>
+            <legend>휴대폰 인증번호 양식</legend>
+        </fieldset>
+        <fieldset>
+            <legend>인증 약관 동의양식</legend>
+            <button type="button" id="certified_btn">인증요청</button><!-- 버튼은 하나니까 id! -->
+            <button type="button" id="id_overlap_btn">아이디 중복 확인</button>
+            <button type="button" id="search_address_btn">주소검색</button>
+            <button type="button" id="cart_btn">장바구니</button>
+            <button type="button" id="review_regist_btn">리뷰등록</button>
+        </fieldset>
+    </form>
+</body>
+</html>
