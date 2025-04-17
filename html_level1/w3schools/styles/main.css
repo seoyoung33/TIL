@@ -1,0 +1,70 @@
+#wrap {
+    background-color: #C6D7FF;
+    width:440px;
+    height:956px;
+    padding-left:15px;
+    padding-right:15px;
+}
+#wrap h1 {
+    padding-top:165px;
+    font-size:2.5rem;
+    font-weight:700;
+    letter-spacing:-0.02em;
+}
+#wrap > p {} /* #wrap의 모든 자식 p */
+#wrap h1+p {
+     /* #wrap의 h1 옆에 p */
+    margin-top:30px;
+    margin-bottom:95px;
+    letter-spacing:-0.02em;
+}
+#wrap #login_frm {
+    letter-spacing:-0.02em;
+}
+#wrap #login_frm h2 {
+    font-size:1.375rem;
+    font-weight:600;
+}
+#wrap #login_frm p {
+    margin-top:12px;
+}
+#wrap #login_frm p input {
+    background-color:#fff;
+    width:410px;
+    height:44px;
+    font-size:0.875rem;
+    font-weight:300;
+    margin-bottom:50px;
+    padding-left:20px;
+}
+#wrap #login_frm p #login_btn {
+    background-color:#224EAC;
+    color:#fff;
+    width:410px;
+    height:44px;
+    border-radius:20px;
+    font-weight:600;
+    font-size:0.875rem;
+}
+#wrap #login_frm p .google_login_btn {
+    background-color:#fff;
+    border-radius:20px;
+    display: block;
+    text-align: center;
+    width: 410px;
+    height:44px;
+    line-height:44px;
+    font-weight:600;
+    font-size:0.875rem;
+}
+#wrap #login_frm+p {
+    margin-top:140px;
+    text-align: center;
+    font-size:0.75rem;
+    font-weight:400;
+    letter-spacing
+} /* #wrap의 login_frm 옆에 p */
+#wrap #login_frm+p a {
+    font-size:0.75rem;
+    font-weight:600;
+}
