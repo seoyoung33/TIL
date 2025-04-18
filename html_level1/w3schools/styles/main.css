@@ -9,39 +9,42 @@
     padding-top:165px;
     font-size:2.5rem;
     font-weight:700;
-    letter-spacing:-0.02em;
 }
 #wrap > p {} /* #wrap의 모든 자식 p */
 #wrap h1+p {
      /* #wrap의 h1 옆에 p */
     margin-top:30px;
     margin-bottom:95px;
-    letter-spacing:-0.02em;
 }
-#wrap #login_frm {
-    letter-spacing:-0.02em;
-}
+#wrap #login_frm {}
 #wrap #login_frm h2 {
     font-size:1.375rem;
     font-weight:600;
+    margin-bottom:12px;
 }
-#wrap #login_frm p {
-    margin-top:12px;
+#wrap #login_frm p {}
+#wrap #login_frm p.user_in {margin-bottom:50px;} /* input에 마진을 주기보다는 부모인 p의 아래에 주는 것이 좋음. class이름을 지정해서 주면 한번에 줄 수 있고 나중에 수정하기도 좋음! */
+#wrap #login_frm p.user_btn {margin-bottom:12px;} /* button에 마진을 주기보다는 부모인 p의 아래에 주는 것이 좋음. class이름을 지정해서 주면 한번에 줄 수 있고 나중에 수정하기도 좋음! */
+#wrap #login_frm p input::placeholder {
+    /* placeholder 속성선택자 작성법 */
+    font-size:0.875rem;
+    font-weight:300;
+    color:#aaa;
 }
 #wrap #login_frm p input {
     background-color:#fff;
     width:410px;
-    height:44px;
-    font-size:0.875rem;
-    font-weight:300;
-    margin-bottom:50px;
     padding-left:20px;
+    padding-right:20px;
+    padding-top:15px;
+    padding-bottom:15px;
 }
 #wrap #login_frm p #login_btn {
     background-color:#224EAC;
     color:#fff;
     width:410px;
-    height:44px;
+    padding-top:15px;
+    padding-bottom:15px;
     border-radius:20px;
     font-weight:600;
     font-size:0.875rem;
@@ -52,8 +55,8 @@
     display: block;
     text-align: center;
     width: 410px;
-    height:44px;
-    line-height:44px;
+    padding-top:15px;
+    padding-bottom:15px;
     font-weight:600;
     font-size:0.875rem;
 }
@@ -61,10 +64,6 @@
     margin-top:140px;
     text-align: center;
     font-size:0.75rem;
-    font-weight:400;
-    letter-spacing
+    letter-spacing:0;
 } /* #wrap의 login_frm 옆에 p */
-#wrap #login_frm+p a {
-    font-size:0.75rem;
-    font-weight:600;
-}
+#wrap #login_frm+p a {font-weight:600;}
