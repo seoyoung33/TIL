@@ -1,0 +1,33 @@
+/* nth1.css */
+table, tr, td {
+    border: 1px solid #000;
+    border-collapse:collapse;} /* 이중선을 없애겠다. */
+#t {width:300px; height:300px;} /* 각 칸에 100씩 주고싶으면 100*3=300px로 적으면 됌 */
+#t tbody {}
+#t tbody tr {}
+#t tbody tr td {}
+/* #t tbody tr:nth-child(1) td:nth-child(1) {background-color: yellow;} */
+#t tbody tr:first-child td:last-child {background-color:coral;}
+#t tbody tr:nth-child(2) td:nth-child(2) {background-color:aqua;}
+#t tbody tr:last-child td:first-child {background-color:orange;}
+#t tbody tr:nth-child(1) td:first-child {background-color:greenyellow;}
+#t tbody tr:last-child td:nth-child(3) {background-color:yellow;}
+#t tbody tr td:nth-child(2) {background-color:beige;}
+#t tbody tr:nth-child(2) td:first-child, td:last-child {background-color:beige;}
+.box h2:nth-child(3) {background-color:aquamarine;}
+.box h2:nth-of-type(1) {color:red;}
+.box h2:first-of-type {font-weight:800;}
+.box p:nth-child(5) {background-color:blueviolet; font-weight:700; font-size:2rem; height:50px; line-height:50px;}
+.box p:nth-of-type(3) {color:yellow;}
+.list {}
+.list li {
+    border:1px solid #000;
+    display:inline-block;
+    width:50px; height:50px;
+    line-height:50px;
+    font-size:0.75rem;
+    text-align:center;
+}
+.list li:nth-child(3n+2) {background-color:blue; color:white;}
+.list li:nth-child(odd) {color:violet; border:3px dotted #ff0044}
+.list li:nth-child(even) {color:teal;}
