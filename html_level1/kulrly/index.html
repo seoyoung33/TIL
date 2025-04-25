@@ -26,31 +26,34 @@
             <dl class="member_info">
                 <dt>아이디<em>*</em></dt>
                 <dd><input type="text" name="user_id" placeholder="아이디를 입력해주세요"></dd>
-                <dd><button type="button" id="id_overlap_btn">중복확인</button></dd>
+                <dd><button type="button" id="id_overlap_btn" class="btn">중복확인</button></dd><!-- id가 있어도 버튼 디자인이 같으면 class를 하나 더 넣기도 한다. -->
                 <dt>비밀번호<em>*</em></dt>
                 <dd><input type="password" name="user_pw" placeholder="비밀번호를 입력해주세요"></dd>
                 <dd></dd>
                 <dt>비밀번호확인<em>*</em></dt>
                 <dd><input type="password" name="user_pw_chk" placeholder="비밀번호를 한번 더 입력해주세요"></dd>
-                <dd></button></dd>
+                <dd></dd>
                 <dt>이름<em>*</em></dt>
                 <dd><input type="text" name="user_name" placeholder="이름을 입력해주세요"></dd>
                 <dd></dd>
                 <dt>이메일<em>*</em></dt>
                 <dd><input type="email" name="user_email" placeholder="예)abc@web.com"></dd>
-                <dd><button type="button" id="email_ovverlap_btn">중복확인</button></dd>
+                <dd><button type="button" id="email_overlap_btn" class="btn">중복확인</button></dd>
                 <dt>휴대폰<em>*</em></dt>
                 <dd>
-                    <select name="agency" class="company">
-                        <option value="user_agency_kt">kt</option>
-                        <option value="user_agency_lg U+">lg U+</option>
-                        <option value="user_agency_skt">skt</option>
+                    <select name="news_agency"><!-- 선택양식, 목록양식 / name이 그룹명! -->
+                        <option>통신사</option>
+                        <option value="kt">KT</option>
+                        <option value="lgu">LG U+</option>
+                        <option value="skt">SKT</option>
+                        <option value="mvno">알뜰폰</option>
                     </select>
-                    <input type="text" name="user_num" placeholder="숫자만 입력해주세요 예)01012345678" mexlength="11"></dd>
-                <dd><button type="button" id="authentication_btn">인증번호받기</button></dd>
+                    <input type="number" name="user_phone_num" placeholder="숫자만 입력해주세요 예)01012345678"></dd>
+                    <!-- 위아래 버튼 없애는건 reset에서 없앤다! number는 maxlength가 안된다. javascript에서 조정 -->
+                <dd><button type="button" id="authentication_btn" class="btn">인증번호받기</button></dd>
                 <dt>주소<em>*</em></dt>
                 <dd>
-                    <button type="button" id="add_overlap_btn">주소검색</button>
+                    <button type="button" id="add_search_btn">주소검색</button>
                     <span>배송지에 따라 상품 정보가 달라질 수 있습니다.</span>
                 </dd>
                 <dd></dd>
@@ -60,17 +63,17 @@
                     <label for="male">남자</label>
                     <input type="radio" name="gender" value="female" id="female">
                     <label for="female">여자</label>
-                    <input type="radio" name="gender" value="none" id="none">
-                    <label for="none">선택안함</label>
+                    <input type="radio" name="gender" value="gender_none" id="gender_none"><!-- id를 쓸때 그냥 none 쓰면 중복될 가능성이 많으므로 흔하지 않은걸로 수정해주기! -->
+                    <label for="gender_none">선택안함</label>
                 </dd>
                 <dd></dd>
                 <dt>생년월일</dt>
                 <dd>
-                    <input type="text" name="year" placeholder="YYYY">
+                    <input type="number" name="birth_year" placeholder="YYYY">
                     <span>/</span>
-                    <input type="text" name="month" placeholder="MM">
+                    <input type="number" name="birth_month" placeholder="MM">
                     <span>/</span>
-                    <input type="text" name="date" placeholder="DD">
+                    <input type="number" name="birth_day" placeholder="DD">
                 </dd>
                 <dd></dd>
             </dl>
