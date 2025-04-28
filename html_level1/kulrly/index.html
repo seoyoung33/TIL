@@ -58,7 +58,7 @@
                 </dd>
                 <dd></dd>
                 <dt>성별</dt>
-                <dd>
+                <dd class="gender_g">
                     <input type="radio" name="gender" value="male" id="male">
                     <label for="male">남자</label>
                     <input type="radio" name="gender" value="female" id="female">
@@ -69,11 +69,9 @@
                 <dd></dd>
                 <dt>생년월일</dt>
                 <dd>
-                    <input type="number" name="birth_year" placeholder="YYYY">
-                    <span>/</span>
-                    <input type="number" name="birth_month" placeholder="MM">
-                    <span>/</span>
-                    <input type="number" name="birth_day" placeholder="DD">
+                    <span><input type="number" name="birth_year" placeholder="YYYY"></span><!-- 가상의 태그를 만들기 위해 태그 안에 넣어줌. -->
+                    <span><input type="number" name="birth_month" placeholder="MM"></span>
+                    <span><input type="number" name="birth_day" placeholder="DD"></span>
                 </dd>
                 <dd></dd>
             </dl>

@@ -268,3 +268,29 @@
 * 속성종류 1. button : 범용기능(주소찾기, 중복확인, 이전, 다음, 재생, 정지 등)
 * 속성종류 2. submit : `form action` 주소에 `method`값 형태로 전달되는 최종 서버전송버튼
 * 속성종류 3. reset : 취소 or 삭제 버튼(가입취소, 주문취소 등)
+----
+## CSS Calc() 함수
+* CSS에서 길이, 비율, 수치 등을 계산할 때 사용하는 함수
+* 단위가 다른(px, % 등) 값도 계산할 수 있어서 레이아웃 조정 시 유용함.
+* `+,-,*,/` 산술 연산자 모두 사용 가능
+* 계산시 **연산자 앞 뒤 반드리 공백 포함**해서 작성하기!!
+### CSS Calc() 함수 예시
+* `height:clac(50vh - 100px);`
+* `padding:clac(100% - (10px * 3));` 우선순위 괄호 추가 사용가능!
+* `width:clac(90% - (60px + 5px));` 우선순위도 연산자 앞뒤 공백 필수!
+* `width:clac(90% - 65px);`
+## background 종류
+* `background-color:coral;`
+* `background-image:url();`
+* `background-repeat:no-repeat;`
+* `background-attachment:fixed;`
+* `background-position:50% 0;`
+* `background-size:cover;`
+### 위 내용을 한번에 통합버전으로 정리하기
+* `background:color image repeat attachment position / size`
+* 뒤에 오는 속성 순서는 동일하므로 순서 외워두기
+## 가상의 형제(태그) 만들기
+* 중요하지 않은 `/`와 같은 요소는 html에 굳이 쓰지 않고 CSS에서 가상의 형제를 만들어 줄 수 있다.
+* 부모 안에서 자식의 앞,첫째(before)에 들어갈건지 뒤,막내(after)에 들어갈건지 정할 수 있다.
+* 가상의 태그이기 때문에 block 또는 inline 중에 어떤걸로 넣을지 정해줘야 한다.
+* 가상의 태그는 글자와 동일하기 때문에 사이즈, 색상 등의 조절은 글자와 동일하게 적용해주면 된다.
