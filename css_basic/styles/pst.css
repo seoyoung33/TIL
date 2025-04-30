@@ -1,0 +1,49 @@
+/* pst.css */
+html, body {height:300vh;}
+/* 공통 */
+.pst {background-color:#eee; padding:20px; margin:20px;}
+.pst li {width:100px; height:100px;}
+.pst li:nth-child(1) {background-color:yellow;}
+.pst li:nth-child(2) {background-color:greenyellow;}
+.pst li:nth-child(3) {background-color:skyblue;}
+.pst li:nth-child(4) {background-color:hotpink;}
+/* 개별 */
+.pst1 {position:relative;}
+.pst1 li {}
+.pst1 li:nth-child(2) {
+    position:relative; /* 필수속성:현재 위치 기준. 원래 위치는 없어지지 않음 */
+    left:20px; /* 선택속성:이동하고 싶은 방향에 따라 지정 */
+    top:20px;
+}
+.pst1 li:nth-child(3) {
+    position:absolute; /* 3번이 위에 떠있어서 아래의 4번이 아래에 위치되어 안보이게 됨 */
+    right:0; bottom:0; /* 기본이 body라서 화면기준으로 위치하게 됨 */
+}
+.pst1 li:nth-child(4) {position:absolute; right:0; top:0;} /* pst1에 relative를 넣어놨기 때문에 최상단으로 올라가지는 않았음 */
+.pst1 li span {
+    display:inline-block;
+    border:5px solid red; padding:10px;
+    position:absolute;
+    right:0; bottom:0;
+}
+/* 연습해보기 */
+#all {
+    border:10px solid blue;
+    width:500px; height:500px;
+    position:relative;
+}
+#all #box {
+    border:10px solid red;
+    width:300px; height:300px;
+/*     position:relative; */
+    position:absolute; right:20px; bottom:0;
+}
+#all #box .content {
+    background-color:yellow;
+    width:150px; height:150px;
+    position:absolute; left:0; bottom:0;
+}
+.top {
+    position:fixed; /* body 기준 위치설정 */
+    right:30px; bottom:30px;
+}
