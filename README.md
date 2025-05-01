@@ -305,3 +305,13 @@
 * `flex, float`등 포함 위치가 잡혀잇는 요소에서 상/하/좌/우로 살짝 이동을 할 때는 `position:relative;`
 * 형제 요소 또는 부모-자식 요소 관계에서 부모 위치를 기준으로 요소를 겹치거나 현재 위치와는 관계없이 멀리 이동할 경우는 `position:absolute;`
 * **주의사항** `absolute` 사용 시 부모들 중 별고의 position 속성이 없다면 `body`를 기준으로 위치가 설정되니 부모 중 원하는 기준 대상에 반드시 position속성을 함께 작성해야 한다. `absolute, relative, fixed, sticky` 모두 가능! (상황에 따라 조합하기)
+# html 단축키 활용하기
+## emmet 기능
+* meta:desc
+* meta:kw
+* link+rab
+* img+tab -> 필수속성 바로 나옴
+* ul>li*3 -> li 3개 만들겠다
+* h1+p*3 -> h1과 p 3개를 형제로 만들겠다.
+* .box -> 클래스 박스만들겠다
+* #box -> id 박스만들겠다.
