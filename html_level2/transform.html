@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform | css</title>
+    <link rel="stylesheet" href="../css_basic/styles/reset.css">
+    <style>
+        .parent {
+            background-color:#eee; padding:30px;
+        }
+        .parent .child {
+            width:100px; height:100px;
+            border:1px solid #000;
+        }
+        .parent .child1 {
+            background-color:aqua;
+            transition:background-color 2s;
+            /* 자연스럽게 바뀌길 원한다면 변경되는 hover 등에 transition을 넣어주는 것이 아니라 자체에 넣어주기!! */
+        }
+        .parent .child1:hover {
+            background-color:lime;
+        /* transition:애니메이션적용속성 지속시간; */
+        }
+        .parent .child2 {transition:width 0.5s, height 1s;}
+        .parent .child2:hover {
+            width:150px; height:200px;
+        }
+        .parent .child3 {transition:border 0.3s;}
+        .parent:hover .child3 {border:5px solid #f00;}
+        .parent .child4 {
+            border-radius:50%;
+            position:relative; left:0; /* 시작위치(현재위치) */
+            transition:left 0.7s ease-out 1s; /* 변하는 속성으로 적어줘야 하기 때문에 position이 아니라 left를 적어주는 것 */
+        }
+        .parent:hover .child4 {
+            left:300px; /* position 등을 이용한 움직임 동작이 있을 때는 자식 말고 부모에게 넣는 것이 자연스러워짐. */
+        }
+        .parent .child5 {
+            border-radius:20%;
+            position:relative; left:0; bottom:0;
+            transition:left 1s, bottom 1s, background-color 1s;
+        }
+        .parent:hover .child5 {
+            left:400px; bottom:300px;
+            background-color:blue;
+        }
+        .parent .child6 {
+            width:400px; height:600px;
+            background-image:url(https://i.pinimg.com/736x/56/f6/eb/56f6eb7f43ebfba60b35427a963768ca.jpg);
+            background-size:100%; /* 잘려도 되니까 자동으로 비율에 맞게 맞추기 */
+            background-position:center;
+            /* transition:background-position 0.5s, background-size 1s, background-image 1s; */
+            transition:all 1s;
+        }
+        .parent .child6:hover {
+            background-image:url(https://i.pinimg.com/736x/29/b0/f3/29b0f3b5b0c01125d98dd47d2bbef7e7.jpg);
+            /* background-position:100px 0; */
+            background-size:80%;
+            /* %를 쓸 생각이면 cover이나 contain을 쓰면 안된다. 기준을 100%으로 주기 */
+        }
+        .parent .child7 {
+            width:800px; height:239px;
+            background-image:url(./images/bg.jpg);
+            background-position:0 0;
+            background-size:cover;
+            background-repeat:repeat-x; /* 옆으로만 반복하라 */
+            transition:all 10s linear; /* 10초동안 일정한 속도로 */
+        }
+        .parent .child7:hover {
+            background-position:-3000px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>transition</h1>
+    <p>기존 CSS 속성이 사용자의 동작에 의해서 변경될 때 애니메이션 효과를 주는 속성</p>
+    <div class="parent">
+        <div class="child child1"></div>
+        <div class="child child2"></div>
+        <div class="child child3"></div>
+        <div class="child child4"></div>
+        <div class="child child5"></div>
+        <div class="child child6"></div>
+        <div class="child child7"></div>
+    </div>
+</body>
+</html>
