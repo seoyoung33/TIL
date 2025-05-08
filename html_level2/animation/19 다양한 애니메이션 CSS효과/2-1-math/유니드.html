@@ -61,16 +61,34 @@
             display:flex; justify-content: space-between; align-items:center;
         }
         main .center h1 {color:#fff; display:flex; flex-flow:column nowrap; justify-content: space-between;}
-        main .center h1 span {font-size:3.5rem; letter-spacing:-2.5px; padding:10px 0;}
+        main .center h1 span {
+            font-size:3.5rem; letter-spacing:-2.5px; padding:10px 0; color:#fff;
+            animation:title 0.5s both; opacity:0; /* 초기값 설정해줘야 함 */
+        }
+        main .center h1 span:nth-child(1) {}
+        main .center h1 span:nth-child(2) {animation-delay:0.5s;}
         main .center .right {
             position:relative; right:174px; top:-100px;
+            animation:play 1.5s;
         }
         main .center .right span {
             position:absolute; width:174px; height:174px;
         }
-        main .center .right span:nth-child(1) {}
+        main .center .right span:nth-child(1) {animation:rolling 10s linear infinite alternate;}
         main .center .right span:nth-child(2) {text-align:center; line-height:174px;}
         /* animation */
+        @keyframes title {
+            0% {transform:translateY(100px);}
+            100% {transform:translateY(0); opacity:1;}
+        }
+        @keyframes play {
+            from {transform:translateX(100px); opacity:0;}
+            to {transform:translateX(0); opacity:1;}
+        }
+        @keyframes rolling {
+            from {transform:rotate(0);}
+            to {transform:rotate(360deg);}
+        }
     </style>
 </head>
 <body>

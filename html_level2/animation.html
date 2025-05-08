@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation | keyframes | css</title>
+    <link rel="stylesheet" href="../css_basic/styles/reset.css">
+    <style>
+        main {background:#eee; padding:50px; height:100vh;}
+        main .target {} /* 공통 */
+        main .ball {
+            background:radial-gradient(at left top, #fff, #222);
+            /* background-size:120%; */
+            /* background-position:100%; */
+            width:50px; height:50px; border-radius:50%;
+            animation:right500 1s linear 0.5s 4 alternate both; /* 아래 'right500'을 불러와서 2초동안 움직이게 하겠다. */
+        }
+/*         main .ball2 {
+            margin:30px 100px;
+            background:radial-gradient(at right bottom, #fff000, #ff00ff);
+            width:80px; height:80px; border-radius:50%;
+            animation:bottom400 1.5s ease-in 1s 6 alternate-reverse forwards;
+        } */
+/*         main .ball3 {
+            animation:zigzag 3s ease-in 4 alternate both;
+        }
+        main .ball3 img {
+            width:80px; animation:rotate360 2s linear infinite;
+        } */
+        /* HTML 텍스트 애니메이션 만들기 */
+        section {}
+        section .ad {
+            height:50vh; padding:50px;
+        }
+        section .ad span {
+            text-transform:uppercase;
+            font-size:3rem; font-weight:800;
+            display:inline-block; /* 인라인인지 꼭 확인하기 */
+            animation:ad_txt 0.5s both;
+        }
+        section .ad span:nth-child(1) {animation-delay:0;}
+        section .ad span:nth-child(2) {animation-delay:0.5s;}
+        section .ad span:nth-child(3) {animation-delay:1s;}
+        section .ad span:nth-child(4) {animation-delay:1.5s;}
+        section .ad2 {height:50vh; padding:30px;}
+        section .ad2 em {
+            animation:horang_gh 0.5s both;
+            display:inline-block;
+        }
+        section .ad2 em:nth-child(1) {animation-delay:0;}
+        section .ad2 em:nth-child(2) {animation-delay:0.5s;}
+        section .ad2 em:nth-child(3) {animation-delay:1s;}
+        section .ad2 em:nth-child(4) {animation-delay:1.5s;}
+        section .ad2 em:nth-child(5) {animation-delay:2s;}
+        section .ad2 em:nth-child(6) {animation-delay:2.5s;}
+        /* 애니메이션 적용 순서 1.키프레임(장면)생성 2.애니메이션호출 */
+        @keyframes right500 {
+            from {transform:translateX(0) rotate(0);} /* 처음위치 */
+            to {transform:translateX(500px) rotate(360deg);} /* 마지막위치 */
+        }
+        @keyframes bottom400 {
+            from {transform:translateY(0) rotate(0);}
+            to {transform:translateY(400px) rotate(360deg);}
+        }
+        @keyframes zigzag {
+            0% {transform:translate(0, 0);}
+            25% {transform:translate(500px, 0);}
+            50% {transform:translate(0, 500px);}
+            75% {transform:translate(500px, 500px);}
+        }
+        @keyframes rotate360 { /* 공 굴러가는 효과는 따로 만들어줘야 함! */
+            form {transform:rotate(0);}
+            to {transform:rotate(700deg);}
+        }
+        @keyframes ad_txt {
+            from {transform:translateY(100px); opacity:0;}
+            to {transform:translateY(0); opacity:1;}
+        }
+        @keyframes horang_gh {
+            from {transform:translateY(100px); opacity:0;}
+            to {transform:translateY(0px); opacity:1;}
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="target ball"></div>
+        <div class="target ball2"></div>
+        <div class="target ball3"><img src="https://cdn-icons-png.flaticon.com/128/33/33736.png" alt="ball"></div>
+    </main>
+    <section>
+        <div class="ad">
+            <span>H</span>
+            <span>T</span>
+            <span>M</span>
+            <span>L</span>
+        </div>
+        <div class="ad2">
+            <em>호</em>
+            <em>랑</em>
+            <em>가</em>
+            <em>시</em>
+            <em>나</em>
+            <em>무</em>
+        </div>
+    </section>
+</body>
+</html>
