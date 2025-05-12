@@ -1,10 +1,6 @@
-@keyframes cloud {
-    from {}
-    to {}
-}
-@keyframes buildings {
-    from {transform:translateX(0);}
-    to {transform:translateX(500px);}
+@keyframes movebg {
+    from {background-position:0 center;}
+    to {background-position:1500px center;}
 }
 @keyframes wheels {
     from {transform:rotate(0);}
