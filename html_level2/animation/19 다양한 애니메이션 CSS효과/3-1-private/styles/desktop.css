@@ -48,6 +48,7 @@ main .bg_wrap .bg2 {
 main .bg_wrap .bg3 {
     height:100px; position:relative; top:-96px;
     background:url(../images/bg_city2.png) repeat-x;
+    animation:buildings 1s linear infinite;
 }
 /* 메인제목 */
 main .txt {}
@@ -57,7 +58,7 @@ main .car {margin-top:150px; text-align:center; width:600px;}
 main .car #car {width:100%;}
 main .car #left_tire, main .car #right_tire {
     position:absolute; bottom:25px; width:67px;
+    animation:wheels 1.5s linear infinite;
 }
 main .car #left_tire {left:102px;}
 main .car #right_tire {right:91px;}
-
