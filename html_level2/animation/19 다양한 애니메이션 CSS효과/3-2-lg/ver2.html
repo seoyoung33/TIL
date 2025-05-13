@@ -31,7 +31,7 @@
         }
         main .video_bg video {
             position:absolute;
-            left:-100px; top:-200px; z-index:10;
+            left:-600px; top:-250px; z-index:10;
         }
         main .video_bg img {
             position:absolute; 
@@ -42,6 +42,11 @@
             background:url(images/bg_flow.png) repeat-x left top;
             height:150px; width:100%;
             position:absolute; z-index:30;
+            animation:text 20s infinite linear;
+        }
+        @keyframes text {
+            from {background-position:0;}
+            to {background-position:2000px;}
         }
     </style>
 </head>
@@ -53,7 +58,7 @@
     <main>
         <div class="center">
             <div class="video_bg">
-                <video src="video/golden.mp4" autoplay muted loop></video>
+                <video src="video/video_light_2.mp4" autoplay muted loop></video>
                 <img src="images/img_intro.png" alt="">
             </div>
             <div class="txt_bg_ani"></div>

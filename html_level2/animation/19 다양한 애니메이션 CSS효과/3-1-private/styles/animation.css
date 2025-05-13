@@ -1,6 +1,6 @@
 @keyframes movebg {
-    from {background-position:0 center;}
-    to {background-position:1500px center;}
+    from {background-position-x:0;}
+    to {background-position-x:1500px;}
 }
 @keyframes wheels {
     from {transform:rotate(0);}
