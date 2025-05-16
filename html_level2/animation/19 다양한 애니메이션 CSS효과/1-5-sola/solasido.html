@@ -25,7 +25,7 @@
         }
         .slide_wrap .slide_c .slide1 {
             background-image:url(images/bg1.jpg); opacity:1;
-            animation:bg 5s;
+            animation:bg 5s both;
         }
         .slide_wrap .slide_c .slide2 {background-image:url(images/bg2.jpg);}
         .slide_wrap .slide_c .slide3 {background-image:url(images/bg3.jpg);}
@@ -39,12 +39,12 @@
 
         /* animation */
         @keyframes bg {
-            from {transform:scale(0.9);}
-            to {transform:scale(1);}
+            from {background-size:100%;}
+            to {background-size:120%;}
         }
         @keyframes txt {
-            from {transform:translateY(30px); opacity:0;}
-            to {transform:translateY(0); opacity:1;}
+            from {transform:translateY(30px) scale(0.9); opacity:0;}
+            to {transform:translateY(0) scale(1); opacity:1;}
         }
     </style>
     <script>
