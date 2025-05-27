@@ -1,0 +1,6 @@
+/* 다이소 여름신상 css */
+.wrap {}
+.wrap .intro {}
+.wrap .intro .intro_btn {}
+.wrap .intro .intro_btn .product_view_btn {background-color: aqua;}
+.wrap .intro .intro_btn .app_down {background-color: pink;}
