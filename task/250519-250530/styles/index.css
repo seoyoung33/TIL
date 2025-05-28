@@ -1,6 +1,33 @@
 /* 다이소 여름신상 css */
 .wrap {}
-.wrap .intro {}
+/* 1행 intro */
+.wrap .intro {
+    background:url(../images/use_img/bg_pool.png);
+    background-size:contain;
+    padding:100px 0; position:relative;
+}
+.wrap .intro .container {
+    max-width:1250px; min-width:320px;
+    margin:0 auto; text-align:center;
+}
+.wrap .intro .container * {color:#fff;}
+.wrap .intro .container h1 {
+    text-align:left; margin-bottom:50px;}
+.wrap .intro .container h1 a {}
+.wrap .intro .container h1 a img {}
+.wrap .intro .container p {
+    font-size:1.875rem; font-weight:600;
+    text-shadow:0 3px 5px rgba(0,0,0,0.4);
+}
+.wrap .intro .container h2 {}
+.wrap .intro .container h2 img {}
 .wrap .intro .intro_btn {}
 .wrap .intro .intro_btn .product_view_btn {background-color: aqua;}
 .wrap .intro .intro_btn .app_down {background-color: pink;}
+.wrap .intro .bg_imgs {}
+.wrap .intro .bg_imgs img:nth-child(1) {}
+.wrap .intro .bg_imgs img:nth-child(2) {}
+.wrap .intro .bg_imgs img:nth-child(3) {}
+.wrap .intro .bg_imgs img:nth-child(4) {}
+.wrap .intro .bg_imgs img:nth-child(5) {}
+/* 2행 */
