@@ -19,12 +19,14 @@
     font-size:1.875rem; font-weight:600;
     text-shadow:0 3px 5px rgba(0,0,0,0.4);
 }
-.wrap .intro .container h2 {}
+.wrap .intro .container p:nth-of-type(2) {line-height:140%; font-weight:400;}
+.wrap .intro .container h2 {margin:20px 0;}
 .wrap .intro .container h2 img {}
-.wrap .intro .intro_btn {}
-.wrap .intro .intro_btn .product_view_btn {background-color: aqua;}
+.wrap .intro .intro_btn {margin-top:50px;}
+.wrap .intro .intro_btn > * {width:210px; padding:15px 0;}
+.wrap .intro .intro_btn .product_view_btn {background-color: aqua;display:flex; flex-flow:row nowrap; align-content:center; justify-content:center;}
 .wrap .intro .intro_btn .app_down {background-color: pink;}
-.wrap .intro .bg_imgs {}
+.wrap .intro .bg_imgs {width:}
 .wrap .intro .bg_imgs img:nth-child(1) {}
 .wrap .intro .bg_imgs img:nth-child(2) {}
 .wrap .intro .bg_imgs img:nth-child(3) {}
