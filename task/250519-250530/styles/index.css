@@ -3,7 +3,7 @@
 /* 1행 intro */
 .wrap .intro {
     background:url(../images/use_img/bg_pool.png);
-    background-size:contain;
+    background-size:contain; background-position:center 0;
     padding:100px 0; position:relative;
 }
 .wrap .intro .container {
@@ -12,7 +12,7 @@
 }
 .wrap .intro .container * {color:#fff;}
 .wrap .intro .container h1 {
-    text-align:left; margin-bottom:50px;}
+    text-align:left; margin-bottom:50px; position:relative; z-index:20;}
 .wrap .intro .container h1 a {}
 .wrap .intro .container h1 a img {}
 .wrap .intro .container p {
@@ -26,10 +26,11 @@
 .wrap .intro .intro_btn > * {width:210px; padding:15px 0;}
 .wrap .intro .intro_btn .product_view_btn {background-color: aqua;display:flex; flex-flow:row nowrap; align-content:center; justify-content:center;}
 .wrap .intro .intro_btn .app_down {background-color: pink;}
-.wrap .intro .bg_imgs {width:}
-.wrap .intro .bg_imgs img:nth-child(1) {}
-.wrap .intro .bg_imgs img:nth-child(2) {}
-.wrap .intro .bg_imgs img:nth-child(3) {}
+.wrap .intro .bg_imgs {}
+.wrap .intro .bg_imgs * {position:absolute;}
+.wrap .intro .bg_imgs img:nth-child(1) {left:60px; top:-90px;}
+.wrap .intro .bg_imgs img:nth-child(2) {left:30px; top:160px;}
+.wrap .intro .bg_imgs img:nth-child(3) {right:-350px; top:-370px;}
 .wrap .intro .bg_imgs img:nth-child(4) {}
 .wrap .intro .bg_imgs img:nth-child(5) {}
 /* 2행 */
