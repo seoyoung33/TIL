@@ -142,6 +142,17 @@
 3. 피그잼에 일부 화면 넘겨서 태그 계획하기
 4. 계획한 태그를 가족과계에 맞게 트리구조 만들기
 5. vs code에서 실제 HTML 작성하기(트리구조 순서에 맞게 바깥쪽->안쪽순서로!)
+### 새로 만들기
+1. 폴더 만들기
+2. visual studio에 연결해주기
+3. gitHub에서 new repositories 만들어주고 이름 생성하기
+4. visual studio에서 git bash 열고
+5. git init
+6. git branch -m main
+7. git remote add origin 깃주소복붙
+8. git add .
+9. git commit -m '메모'
+10. git push origin main
 ### 다른 환경에서 git 이어서 작업하기
 1. 새폴더 연결하기
 2. `git clone 저장소 주소 붙여넣기`
